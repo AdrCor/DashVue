@@ -1,8 +1,9 @@
 <template>
     <Background>
         <NavRail />
-        <div class="ml-20 flex flex-wrap gap-8 p-2">
-            <div v-for="_ in Array.from(Array(36))" class="h-32 w-32 bg-primary"></div>
+        <div class="ml-20 flex flex-col">
+            <header class="h-12 text-front text-xl my-4 bg-layout bg-opacity-10">HEADER</header>
+            <router-view />
         </div>
     </Background>
 </template>

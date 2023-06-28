@@ -13,7 +13,8 @@
         "@vueuse/core": "^10.2.0",
         "pinia": "^2.1.4",
         "tw-colors": "^1.2.6",
-        "vue": "^3.2.47"
+        "vue": "^3.2.47",
+        "vue-router": "^4.2.2"
     },
     "devDependencies": {
         "@types/node": "^20.3.2",

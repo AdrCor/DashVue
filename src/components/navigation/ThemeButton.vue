@@ -1,7 +1,7 @@
 <template>
     <button
         @click="changeThemeMode"
-        class="rounded-xl bg-front bg-opacity-0 fill-front p-1 opacity-80 transition-all hover:bg-opacity-10 hover:opacity-100"
+        class="rounded-xl bg-front bg-opacity-0 fill-front p-1 opacity-80 transition-all hover:bg-opacity-10 hover:opacity-100 hover:shadow-xl"
     >
         <Sun v-if="theme.mode == 'dark'" />
         <Moon v-if="theme.mode == 'light'" />
