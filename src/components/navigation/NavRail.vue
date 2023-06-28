@@ -1,6 +1,13 @@
 <template>
-    <nav class="h-full w-20 p-2 fixed z-20">
-        <div class="flex flex-col h-full w-full rounded-full bg-front/20 backdrop-blur-md">
-        </div>
+    <nav class="fixed z-20 h-full w-20 p-4">
+        <Layout class="flex h-full flex-col bg-opacity-20 px-1 py-2">
+            <div class="flex-grow"></div>
+            <ThemeButton />
+        </Layout>
     </nav>
 </template>
+
+<script setup lang="ts">
+import Layout from '../global/Layout.vue'
+import ThemeButton from './ThemeButton.vue';
+</script>

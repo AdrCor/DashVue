@@ -13,6 +13,5 @@ export const useThemeStore = defineStore('theme', () => {
         mode.value = value
     }
 
-    return {name, mode, setName, setMode}
+    return { name, mode, setName, setMode }
 })
-

@@ -3,7 +3,7 @@
         :class="{ 'dark theme-base-dark': theme.mode == 'dark', 'theme-base-light': theme.mode == 'light' }"
         class="fixed inset-0 bg-gradient-to-br from-grad-start to-grad-stop"
     >
-        <div class="bg-fullback fixed inset-0 overflow-auto">
+        <div class="fixed inset-0 overflow-auto bg-fullback">
             <slot></slot>
         </div>
     </div>
