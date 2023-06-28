@@ -4,14 +4,28 @@ import { createThemes } from 'tw-colors'
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 
+function opacity(value) {
+    return Math.ceil(value * 2.55)
+        .toString(16)
+        .padStart(2, '0')
+}
+
 const baseDark = {
+    'grad-start': '#6E88C4',
+    'grad-stop': '#C4BD6E',
+    fullback: '#111318' + opacity(90),
     front: '#D1D9E7',
-    back: '#111318'
+    back: '#111318',
+    primary: '#6E88C4',
 }
 
 const baseLight = {
-    primary: '#111318',
-    background: '#D1D9E7',
+    'grad-start': '#6E88C4',
+    'grad-stop': '#C4BD6E',
+    fullback: '#111318' + opacity(90),
+    front: '#111318',
+    back: '#D1D9E7',
+    primary: '#6E88C4',
 }
 
 

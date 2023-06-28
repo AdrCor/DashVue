@@ -10,7 +10,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: grey;
+    background: gray;
     border-radius: 99px;
     border: 6px solid rgba(0, 0, 0, 0);
     background-clip: padding-box;
