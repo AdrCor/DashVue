@@ -35,8 +35,8 @@ interface Theme {
 }
 
 export const baseDark = {
-    'grad-start': '#6E88C4',
-    'grad-stop': '#C4BD6E',
+    'grad-start': '#121419',
+    'grad-stop': '#D0D6E7',
     fullback: '#121419' + opacity(90),
 
     front: '#D0D6E7',
@@ -66,8 +66,8 @@ export const baseDark = {
 
 export const baseLight = {
     'grad-start': '#6E88C4',
-    'grad-stop': '#C4BD6E',
-    fullback: '#D0D6E7' + opacity(80),
+    'grad-stop': '#D0D6E7',
+    fullback: '#D0D6E7' + opacity(60),
 
     front: '#121419',
     back: '#D0D6E7',
