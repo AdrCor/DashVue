@@ -1,5 +1,5 @@
 <template>
-    <Layout class="flex h-full flex-row rounded-full px-2">
+    <Layout class="flex flex-row rounded-full px-2">
         <Loop class="mr-1 h-6 w-6 self-center stroke-front" />
         <input
             @keypress.enter="emit('on-input')"
