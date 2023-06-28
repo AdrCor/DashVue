@@ -5,7 +5,7 @@
                 <Home />
             </RailButton>
             <RailButton to="/about" :selected="currentRouteName == 'about'">
-                <Home />
+                <QuestionMark />
             </RailButton>
             <div class="flex-grow"></div>
             <ThemeButton />
@@ -16,8 +16,9 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-import Layout from '../global/Layout.vue'
+import Layout from '@/components/global/Layout.vue'
 import Home from '@/components/icons/outline/Home.vue'
+import QuestionMark from '@/components/icons/outline/QuestionMark.vue'
 import RailButton from './RailButton.vue'
 import ThemeButton from './ThemeButton.vue'
 
