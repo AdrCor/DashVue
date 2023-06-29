@@ -1,7 +1,7 @@
 <template>
     <Background>
         <NavRail />
-        <SearchBar placeholder="Search.." class="fixed right-4 top-4 m-1 h-10 w-64" />
+        <SearchBar placeholder="Search.." round class="fixed right-4 top-4 m-1 h-10 w-64" />
         <main class="ml-20 flex flex-col py-4 pr-4" ref="el">
             <Header />
             <router-view />
@@ -15,3 +15,6 @@ import NavRail from '@/components/navigation/NavRail.vue'
 import Header from '@/components/Header.vue'
 import SearchBar from './components/SearchBar.vue'
 </script>
+
+'stroke-neutral-tx stroke-primary-tx stroke-secondary-tx stroke-success-tx stroke-warning-tx stroke-danger-tx'
+'text-neutral-tx text-primary-tx text-secondary-tx text-success-tx text-warning-tx text-danger-tx'

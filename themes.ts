@@ -7,89 +7,110 @@ function opacity(value: number) {
 interface Theme {
     'grad-start': string
     'grad-stop': string
-    fullback: string
-
-    front: string
     back: string
-    layout: string
+
+    layer: string
+    neutral: string
+    'neutral-bg': string
+    'neutral-tx': string
+    'on-neutral': string
 
     primary: string
-    'primary-front': string
-    'primary-back': string
+    'primary-bg': string
+    'primary-tx': string
+    'on-primary': string
 
     secondary: string
-    'secondary-front': string
-    'secondary-back': string
+    'secondary-bg': string
+    'secondary-tx': string
+    'on-secondary': string
 
     success: string
-    'succes-front': string
-    'succes-back': string
+    'success-bg': string
+    'success-tx': string
+    'on-success': string
 
     warning: string
-    'warning-front': string
-    'warning-back': string
+    'warning-bg': string
+    'warning-tx': string
+    'on-warning': string
 
     danger: string
-    'danger-front': string
-    'danger-back': string
+    'danger-bg': string
+    'danger-tx': string
+    'on-danger': string
 }
 
-export const baseDark = {
+export const baseDark: Theme = {
     'grad-start': '#121419',
     'grad-stop': '#D0D6E7',
-    fullback: '#121419' + opacity(90),
+    back: '#121419' + opacity(90),
 
-    front: '#D0D6E7',
-    back: '#121419',
-    layout: '#D0D6E7',
+    layer: '#D0D6E7',
+    neutral: '#D0D6E7',
+    'neutral-bg': '#121419',
+    'neutral-tx': '#D0D6E7',
+    'on-neutral': '#D0D6E7',
 
     primary: '#6E88C4',
-    'primary-front': '#0D111A',
-    'primary-back': '#6E88C4',
+    'primary-bg': '#6E88C4',
+    'primary-tx': '#6E88C4',
+    'on-primary': '#141F38',
 
     secondary: '#C4BD6E',
-    'secondary-front': '#19180C',
-    'secondary-back': '#C4BD6E',
+    'secondary-bg': '#C4BD6E',
+    'secondary-tx': '#C4BD6E',
+    'on-secondary': '#1A180D',
 
     success: '#6EC491',
-    'succes-front': '#0C1911',
-    'succes-back': '#6EC491',
+    'success-bg': '#70A786',
+    'success-tx': '#6EC491',
+    'on-success': '#133922',
 
     warning: '#C49D6E',
-    'warning-front': '#19130D',
-    'warning-back': '#C49D6E',
+    'warning-bg': '#A88F71',
+    'warning-tx': '#C49D6E',
+    'on-warning': '#382713',
 
     danger: '#C46E6E',
-    'danger-front': '#190D0D',
-    'danger-back': '#C46E6E',
+    'danger-bg': '#A87171',
+    'danger-tx': '#C46E6E',
+    'on-danger': '#381313',
 }
 
-export const baseLight = {
+export const baseLight: Theme = {
     'grad-start': '#6E88C4',
     'grad-stop': '#D0D6E7',
-    fullback: '#D0D6E7' + opacity(60),
+    back: '#D0D6E7' + opacity(60),
 
-    front: '#121419',
-    back: '#D0D6E7',
-    layout: '#121419',
+    layer: '#121419',
+    neutral: '#121419',
+    'neutral-bg': '#D0D6E7',
+    'neutral-tx': '#121419',
+    'on-neutral': '#121419',
 
     primary: '#6E88C4',
-    'primary-front': '#0D111A',
-    'primary-back': '#6E88C4',
+    'primary-bg': '#4C68A8',
+    'primary-tx': '#395BA8',
+    'on-primary': '#141F38',
 
     secondary: '#C4BD6E',
-    'secondary-front': '#19180C',
-    'secondary-back': '#C4BD6E',
+    'secondary-bg': '#C4BD6E',
+    'secondary-tx': '#8D8420',
+    'on-secondary': '#1A180D',
 
     success: '#6EC491',
-    'succes-front': '#0C1911',
-    'succes-back': '#6EC491',
+    'success-bg': '#70A786',
+    'success-tx': '#308B54',
+    'on-success': '#133922',
 
     warning: '#C49D6E',
-    'warning-front': '#19130D',
-    'warning-back': '#C49D6E',
+    'warning-bg': '#A88F71',
+    'warning-tx': '#A87639',
+    'on-warning': '#382713',
 
     danger: '#C46E6E',
-    'danger-front': '#190D0D',
-    'danger-back': '#C46E6E',
+    'danger-bg': '#A87171',
+    'danger-tx': '#A83939',
+    'on-danger': '#381313',
 }
