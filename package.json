@@ -11,9 +11,11 @@
     },
     "dependencies": {
         "@vueuse/core": "^10.2.0",
+        "chart.js": "^4.3.0",
         "pinia": "^2.1.4",
         "tw-colors": "^1.2.6",
         "vue": "^3.2.47",
+        "vue-chartjs": "^5.2.0",
         "vue-router": "^4.2.2"
     },
     "devDependencies": {
