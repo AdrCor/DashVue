@@ -1,11 +1,11 @@
 <template>
     <Layout class="flex flex-row px-2" :round="true" :blur="true">
-        <Loop class="mr-1 h-6 w-6 self-center stroke-on-neutral" />
+        <Loop class="mr-1 h-6 w-6 self-center stroke-neutral-tx" />
         <input
             @keypress.enter="emit('on-input')"
             v-model="userInput"
             :placeholder="placeholder"
-            class="bg-transparent text-on-neutral outline-none placeholder:text-on-neutral placeholder:text-opacity-40"
+            class="bg-transparent text-neutral-tx outline-none placeholder:text-neutral-tx placeholder:text-opacity-40"
         />
     </Layout>
 </template>

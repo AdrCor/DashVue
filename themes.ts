@@ -48,9 +48,9 @@ export const baseDark: Theme = {
 
     layer: '#D0D6E7',
     neutral: '#D0D6E7',
-    'neutral-bg': '#121419',
+    'neutral-bg': '#D0D6E7',
     'neutral-tx': '#D0D6E7',
-    'on-neutral': '#D0D6E7',
+    'on-neutral': '#121419',
 
     primary: '#6E88C4',
     'primary-bg': '#6E88C4',
@@ -85,9 +85,9 @@ export const baseLight: Theme = {
 
     layer: '#121419',
     neutral: '#121419',
-    'neutral-bg': '#D0D6E7',
+    'neutral-bg': '#121419',
     'neutral-tx': '#121419',
-    'on-neutral': '#121419',
+    'on-neutral': '#D0D6E7',
 
     primary: '#6E88C4',
     'primary-bg': '#4C68A8',

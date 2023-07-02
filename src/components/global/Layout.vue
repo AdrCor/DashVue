@@ -1,5 +1,5 @@
 <template>
-    <div class="text-on-neutral bg-layer shadow-xl" :class="[
+    <div class="text-neutral-tx bg-layer shadow-xl" :class="[
         round ? 'rounded-full' : 'rounded-xl',
         blur ? 'backdrop-blur-md' : '',
         `bg-opacity-${opacity}`
