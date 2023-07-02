@@ -13,7 +13,7 @@
 
 defineProps({
     round: { type: Boolean, default: false },
-    blur: { type: Boolean, default: true },
+    blur: { type: Boolean, default: false },
     opacity: { type: Number, default: 10 }
 })
 

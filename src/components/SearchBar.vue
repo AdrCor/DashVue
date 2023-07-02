@@ -1,5 +1,5 @@
 <template>
-    <Layout class="flex flex-row px-2" :round="true">
+    <Layout class="flex flex-row px-2" :round="true" :blur="true">
         <Loop class="mr-1 h-6 w-6 self-center stroke-on-neutral" />
         <input
             @keypress.enter="emit('on-input')"
