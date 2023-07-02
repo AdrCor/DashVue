@@ -1,6 +1,6 @@
 <template>
-    <div class="flex flex-col">
-        <div class="flex grow flex-row items-center gap-6">
+    <div class="flex flex-col gap-1">
+        <div class="flex grow flex-wrap items-center gap-x-6">
             <p class="text-2xl font-medium" :class="`text-${color}-tx`">{{ prefix }}{{ value }}{{ suffix }}</p>
             <CardGainText v-if="typeof gain == 'number' && gainText" :value="gain" :text="gainText" />
             <GainTag v-if="typeof gain == 'number' && !gainText" :value="gain" />

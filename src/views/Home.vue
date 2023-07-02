@@ -1,16 +1,34 @@
 <template>
-    <div ref="" class="grid grid-cols-2 lg:grid-cols-4 gap-2">
+    <div ref="" class="grid grid-cols-1 gap-2 xl:grid-cols-3 md:grid-cols-2">
         <CardLayout class="flex flex-col gap-4">
-            <CardHeader :header="revenues.header" :sub="revenues.headerSub"/>
+            <CardHeader :header="revenues.header" :sub="revenues.headerSub" />
+            
             <BasicBar
                 :key="width"
                 class="min-h-48"
-                :color="revenues.chartColor"
+                color="primary"
                 :data="revenues.data"
                 :labels="revenues.labels"
                 :x-max-ticks="99"
             />
-            <CardValue :value="revenues.value" :prefix="revenues.valuePrefix" :sub-value="revenues.valueSub" :sub-text="revenues.valueSubText" :gain="revenues.valueGain" />
+            
+            <div class="flex flex-wrap items-center justify-between gap-4 ">
+                <CardValue
+                class="self-start"
+                :value="revenues.value"
+                color="primary"
+                prefix="$"
+                :sub-value="revenues.valueSub"
+                sub-text="vs previous period"
+                :gain="revenues.valueGain"
+                />
+                <Button color="neutral" size="medium" class="self-end">
+                    <template #icon>
+                        <ChevronRight />
+                    </template>
+                    More
+                </Button>
+            </div>
         </CardLayout>
     </div>
 </template>
@@ -20,7 +38,8 @@ import { useElementSize } from '@vueuse/core'
 import { ref } from 'vue'
 import { CardLayout, CardHeader, CardValue } from '@/components/cards'
 import BasicBar from '@/components/charts/BasicBar.vue'
-import { Color } from '@/types'
+import Button from '@/components/buttons/Button.vue'
+import ChevronRight from '@/components/icons/outline/ChevronRight.vue'
 
 const el = ref<HTMLElement>()
 
@@ -32,13 +51,9 @@ const revenues = {
 
     data: [23843, 18932, 21935, 24093, 25934, 23945],
     labels: ['January', 'February', 'March', 'April', 'May', 'June'],
-    chartColor: 'primary' as Color,
 
     value: 26834,
-    valuePrefix: '$',
-    valueColor: 'primary' as Color,
     valueGain: 4,
     valueSub: 934,
-    valueSubText: 'vs previous period'
 }
 </script>
