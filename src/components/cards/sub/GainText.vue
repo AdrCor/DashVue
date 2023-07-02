@@ -14,8 +14,8 @@
 </template>
 
 <script setup lang="ts">
-import TrendUp from '../icons/outline/TrendUp.vue';
-import TrendDown from '../icons/outline/TrendDown.vue';
+import TrendUp from '@/components/icons/outline/TrendUp.vue';
+import TrendDown from '@/components/icons/outline/TrendDown.vue';
 
 defineProps<{
     value: number

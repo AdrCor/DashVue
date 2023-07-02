@@ -1,5 +1,6 @@
 <template>
-    <Layout class="flex flex-col gap-4 justify-between px-6 py-4">
+    <Layout class="flex flex-row gap-2 px-6 py-4">
+        <div class="flex flex-col gap-4 grow justify-between">
             <CardHeader :header="header" :sub="subHeader" :iconColor="iconColor" :textColor="headerColor" />
 
             <CardValue
@@ -13,6 +14,11 @@
                 :subValue="subValue"
                 :subText="subText"
             />
+        </div>
+
+        <div class="">
+            <slot name="chart"></slot>
+        </div>
     </Layout>
 </template>
 

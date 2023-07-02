@@ -7,7 +7,7 @@
                 'text-neutral-tx text-opacity-60': value == 0,
             }"
         >
-            {{ prefix }}{{ value }}{{ suffix }}
+            {{ value >= 0 ? '+' : '-' }}{{ prefix }}{{ value }}{{ suffix }}
         </span>
         <span class="text-sm text-neutral-tx text-opacity-60">&nbsp;{{ text }}</span>
     </div>
