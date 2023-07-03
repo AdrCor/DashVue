@@ -1,7 +1,10 @@
 <template>
     <div ref="" class="grid grid-cols-1 gap-2 xl:grid-cols-3 md:grid-cols-2">
         <CardLayout class="flex flex-col gap-4">
-            <CardHeader :header="revenues.header" :sub="revenues.headerSub" />
+            <div class="flex flex-wrap items-center justify-between">
+                <CardHeader :header="revenues.header" :sub="revenues.headerSub" />
+                <Select :options="['team 1', 'Team 2', 'Team 3']" v-model="selected" color="neutral" type="default" :nullable="true"/>
+            </div>
             
             <BasicBar
                 :key="width"
@@ -40,10 +43,12 @@ import { CardLayout, CardHeader, CardValue } from '@/components/cards'
 import BasicBar from '@/components/charts/BasicBar.vue'
 import Button from '@/components/buttons/Button.vue'
 import ChevronRight from '@/components/icons/outline/ChevronRight.vue'
+import Select from '@/components/selects/Select.vue'
 
 const el = ref<HTMLElement>()
 
 const { width } = useElementSize(el)
+const selected = ref<string | null>(null)
 
 const revenues = {
     header: 'Revenues',
