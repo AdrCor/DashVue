@@ -1,11 +1,11 @@
 <template>
-    <div ref="" class="grid grid-cols-1 gap-2 xl:grid-cols-3 md:grid-cols-2">
+    <div ref="" class="grid grid-cols-1 gap-2 md:grid-cols-2 xl:grid-cols-3">
         <CardLayout class="flex flex-col gap-4">
             <div class="flex flex-wrap items-center justify-between">
                 <CardHeader :header="revenues.header" :sub="revenues.headerSub" />
-                <Select :options="['team 1', 'Team 2', 'Team 3']" v-model="selected" color="neutral" type="default" :nullable="true"/>
+                <Dropdown class="w-40" size="small" />
             </div>
-            
+
             <BasicBar
                 :key="width"
                 class="min-h-48"
@@ -14,16 +14,16 @@
                 :labels="revenues.labels"
                 :x-max-ticks="99"
             />
-            
-            <div class="flex flex-wrap items-center justify-between gap-4 ">
+
+            <div class="flex flex-wrap items-center justify-between gap-4">
                 <CardValue
-                class="self-start"
-                :value="revenues.value"
-                color="primary"
-                prefix="$"
-                :sub-value="revenues.valueSub"
-                sub-text="vs previous period"
-                :gain="revenues.valueGain"
+                    class="self-start"
+                    :value="revenues.value"
+                    color="primary"
+                    prefix="$"
+                    :sub-value="revenues.valueSub"
+                    sub-text="vs previous period"
+                    :gain="revenues.valueGain"
                 />
                 <Button color="neutral" size="medium" class="self-end">
                     <template #icon>
@@ -43,12 +43,11 @@ import { CardLayout, CardHeader, CardValue } from '@/components/cards'
 import BasicBar from '@/components/charts/BasicBar.vue'
 import Button from '@/components/buttons/Button.vue'
 import ChevronRight from '@/components/icons/outline/ChevronRight.vue'
-import Select from '@/components/selects/Select.vue'
+import Dropdown from '@/components/dropdown/Dropdown.vue'
 
 const el = ref<HTMLElement>()
 
 const { width } = useElementSize(el)
-const selected = ref<string | null>(null)
 
 const revenues = {
     header: 'Revenues',
