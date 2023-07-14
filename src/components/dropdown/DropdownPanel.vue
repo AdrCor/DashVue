@@ -5,7 +5,7 @@
         <ListboxOption
             v-slot="{ active, selected }"
             v-for="option in options"
-            :key="option.label"
+            :key="typeof option == 'string' ? option : option.label"
             :value="option"
             as="template"
         >
@@ -24,7 +24,7 @@
                     <Check v-if="selected" class="h-full w-full" aria-hidden="true" />
                 </div>
                 <div class="truncate">
-                    {{ option.label }}
+                    {{ typeof option == 'string' ? option : option.label }}
                 </div>
             </li>
         </ListboxOption>
@@ -34,11 +34,11 @@
 <script setup lang="ts">
 import { ListboxOption, ListboxOptions } from '@headlessui/vue'
 import Check from '@/components/icons/outline/Check.vue'
-import { Color } from '@/types'
+import { Color, Option } from '@/types'
 
 withDefaults(
     defineProps<{
-        options: any[]
+        options: Option[] | string[]
         size: 'small' | 'medium' | 'large'
         color: Color
     }>(),

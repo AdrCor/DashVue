@@ -5,8 +5,8 @@
         class="relative"
         as="div"
     >
-            <DropdownButton :size="size" :color="color" :type="type">{{ selected.label }} </DropdownButton>
-            <DropdownPanel :options="people" :size="size" :color="color"/>
+            <DropdownButton :size="size" :color="color" :type="type">{{ typeof selected == 'string' ? selected : selected.label }} </DropdownButton>
+            <DropdownPanel :options="options" :size="size" :color="color"/>
     </Listbox>
 </template>
 
@@ -15,10 +15,12 @@ import { ref } from 'vue'
 import { Listbox } from '@headlessui/vue'
 import DropdownButton from './DropdownButton.vue'
 import DropdownPanel from './DropdownPanel.vue'
-import { Color } from '@/types';
+import { Color, Option } from '@/types';
 
-withDefaults(
+const props = withDefaults(
     defineProps<{
+        options: Option[] | string[]
+        default?: Option | string
         size?: 'small' | 'medium' | 'large'
         color?: Color
         type?: 'default' | 'outline'
@@ -30,13 +32,5 @@ withDefaults(
     }
 )
 
-const people = [
-    { label: 'Wade Cooper' },
-    { label: 'Arlene Mccoy' },
-    { label: 'Devon Webb' },
-    { label: 'Tom Cook' },
-    { label: 'Tanya Fox' },
-    { label: 'Hellen Schmidt' },
-]
-const selected = ref(people[0])
+const selected = ref(props.default ? props.default : props.options[0])
 </script>
