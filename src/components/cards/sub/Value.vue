@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col gap-1">
         <div class="flex grow flex-wrap items-center gap-x-6">
-            <p class="text-2xl font-medium" :class="`text-${color}-tx`">{{ prefix }}{{ value }}{{ suffix }}</p>
+            <p class="text-2xl font-medium" :class="`text-${color}-tx`">{{ formatNumber(value, { prefix: prefix, suffix: suffix}) }}</p>
             <CardGainText v-if="typeof gain == 'number' && gainText" :value="gain" :text="gainText" />
             <GainTag v-if="typeof gain == 'number' && !gainText" :value="gain" />
         </div>
@@ -21,10 +21,11 @@ import { Color } from '@/types'
 import CardGainText from './GainText.vue'
 import GainTag from '@/components/GainTag.vue'
 import CardSub from './Sub.vue'
+import { formatNumber } from '@/composables'
 
 withDefaults(
     defineProps<{
-        value: number | string
+        value: number
         prefix?: string
         suffix?: string
         color?: Color
@@ -37,8 +38,6 @@ withDefaults(
     }>(),
     {
         color: 'neutral',
-        prefix: '',
-        suffix: '',
     }
 )
 </script>

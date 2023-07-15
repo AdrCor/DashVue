@@ -1,24 +1,24 @@
 <template>
-    <div class="flex flex-row rounded-full px-1 p-0.5 items-center gap-0.5 text-sm"
-    :class="{
-        'text-on-success stroke-on-success bg-success-bg': value > 0,
-        'text-on-neutral': value == 0,
-        'text-danger-tx': value < 0
-    }">
-        <ChevronUp class="h-4 w-4"/>
-        <ChevronDown v-if="value < 0"/>
+    <div
+        class="flex flex-row items-center gap-0.5 rounded-full p-0.5 px-1 text-sm font-medium"
+        :class="{
+            'bg-success-bg stroke-on-success text-on-success': value > 0,
+            'bg-neutral-bg/60 stroke-on-neutral text-on-neutral': value == 0,
+            'bg-danger-bg stroke-on-danger text-on-danger': value < 0,
+        }"
+    >
+        <TrendUp class="h-4 w-4" v-if="value >= 0" />
+        <TrendDown class="h-4 w-4" v-if="value < 0" />
         {{ value >= 0 ? '+' : '' }}{{ value }}%
     </div>
 </template>
 
 <script setup lang="ts">
-import ChevronDown from './icons/outline/ChevronDown.vue';
-import ChevronUp from './icons/outline/ChevronUp.vue';
-
+import TrendDown from './icons/outline/TrendDown.vue'
+import TrendUp from './icons/outline/TrendUp.vue'
 
 defineProps<{
     value: number
     icon?: boolean
 }>()
-
 </script>

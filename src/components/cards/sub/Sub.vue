@@ -7,13 +7,14 @@
                 'text-neutral-tx text-opacity-60': value == 0,
             }"
         >
-            {{ value >= 0 ? '+' : '-' }}{{ prefix }}{{ value }}{{ suffix }}
+            {{ formatNumber(value, { prefix: prefix, suffix: suffix }) }}
         </span>
         <span class="text-sm text-neutral-tx text-opacity-60">&nbsp;{{ text }}</span>
     </div>
 </template>
 
 <script setup lang="ts">
+import { formatNumber } from '@/composables'
 defineProps<{
     value: number
     prefix?: string

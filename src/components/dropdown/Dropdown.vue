@@ -11,13 +11,12 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
 import { Listbox } from '@headlessui/vue'
 import DropdownButton from './DropdownButton.vue'
 import DropdownPanel from './DropdownPanel.vue'
 import { Color, Option } from '@/types';
 
-const props = withDefaults(
+withDefaults(
     defineProps<{
         options: Option[] | string[]
         default?: Option | string
@@ -32,5 +31,5 @@ const props = withDefaults(
     }
 )
 
-const selected = ref(props.default ? props.default : props.options[0])
+const selected = defineModel<Option | string>({required: false})
 </script>
