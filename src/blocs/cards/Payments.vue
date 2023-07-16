@@ -24,7 +24,7 @@
                 <div class="grow">
                     <Button size="small">
                         <template #icon>
-                            <ChevronRight />
+                            <ChevronRightIcon />
                         </template>
                         Details
                     </Button>
@@ -37,9 +37,9 @@
 <script setup lang="ts">
 import { ListLayout, ListHeader, ListRow } from '@/components/lists'
 import Button from '@/components/buttons/Button.vue'
-import ChevronRight from '@/components/icons/outline/ChevronRight.vue'
 import StatusTag from '@/components/StatusTag.vue'
 import { CardLayout, CardHeader } from '@/components/cards'
+import { ChevronRightIcon } from '@heroicons/vue/24/outline'
 
 const header = [
     { label: 'Client', size: 2 },

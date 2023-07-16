@@ -13,7 +13,7 @@
             />
             <Button color="neutral" size="small" class="self-end">
                 <template #icon>
-                    <ChevronRight />
+                    <ChevronRightIcon />
                 </template>
                 More
             </Button>
@@ -24,5 +24,5 @@
 <script setup lang="ts">
 import { CardLayout, CardHeader, CardValue } from '@/components/cards'
 import Button from '@/components/buttons/Button.vue'
-import ChevronRight from '@/components/icons/outline/ChevronRight.vue';
+import { ChevronRightIcon } from '@heroicons/vue/24/outline'
 </script>

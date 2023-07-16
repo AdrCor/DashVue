@@ -19,7 +19,7 @@
     >
         <div v-if="slots.icon" :class="[size == 'small' ? 'h-4 w-4' : size == 'medium' ? 'h-5 w-5' : 'h-6 w-6']">
             <slot v-if="!loading" name="icon"></slot>
-            <Spinner v-else="" class="animate-spin" />
+            <ArrowPathIcon v-else="" class="animate-spin" />
         </div>
         <slot name="default"></slot>
     </button>
@@ -28,7 +28,7 @@
 <script setup lang="ts">
 import { Color } from '@/types'
 import { useSlots } from 'vue'
-import Spinner from '@/components/icons/outline/Spinner.vue'
+import { ArrowPathIcon } from '@heroicons/vue/24/outline';
 
 const slots = useSlots()
 

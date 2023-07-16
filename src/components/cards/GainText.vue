@@ -5,8 +5,8 @@
                 'text-neutral-tx stroke-neutral-tx': value == 0,
                 'text-danger-tx stroke-danger-tx': value < 0
             }">
-            <TrendUp v-if="value >= 0" class="h-4 w-4" />
-            <TrendDown v-if="value < 0" class="h-4 w-4" />
+            <ArrowTrendingUpIcon v-if="value >= 0" class="h-4 w-4" />
+            <ArrowTrendingDownIcon v-if="value < 0" class="h-4 w-4" />
             <div class="text-sm font-medium">{{ value >= 0 ? '+' : '' }}{{ value }}%</div>
         </div>
         <div class="text-center text-xs opacity-60">{{ text }}</div>
@@ -14,8 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import TrendUp from '@/components/icons/outline/TrendUp.vue';
-import TrendDown from '@/components/icons/outline/TrendDown.vue';
+import { ArrowTrendingDownIcon, ArrowTrendingUpIcon } from '@heroicons/vue/24/outline'
 
 defineProps<{
     value: number

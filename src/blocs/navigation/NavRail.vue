@@ -2,10 +2,10 @@
     <nav class="fixed z-20 h-full w-20 p-4">
         <Layout class="flex h-full flex-col bg-opacity-20 px-1 py-2 gap-2" :blur="true">
             <RailButton to="/" :selected="currentRouteName == 'home'">
-                <Home />
+                <HomeIcon />
             </RailButton>
             <RailButton to="/about" :selected="currentRouteName == 'about'">
-                <QuestionMark />
+                <QuestionMarkCircleIcon />
             </RailButton>
             <div class="flex-grow"></div>
             <ThemeButton />
@@ -17,8 +17,8 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import Layout from '@/components/global/Layout.vue'
-import Home from '@/components/icons/outline/Home.vue'
-import QuestionMark from '@/components/icons/outline/QuestionMark.vue'
+import { HomeIcon } from '@heroicons/vue/24/outline'
+import { QuestionMarkCircleIcon } from '@heroicons/vue/24/outline'
 import RailButton from './RailButton.vue'
 import ThemeButton from './ThemeButton.vue'
 

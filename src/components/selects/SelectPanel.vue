@@ -21,7 +21,7 @@
                         'h-6 w-6': size == 'large',
                     }"
                 >
-                    <Check v-if="selected" class="h-full w-full" aria-hidden="true" />
+                    <CheckIcon v-if="selected" class="h-full w-full" aria-hidden="true" />
                 </div>
                 <div class="truncate">
                     {{ typeof option == 'string' ? option : option.label }}
@@ -33,7 +33,7 @@
 
 <script setup lang="ts">
 import { ListboxOption, ListboxOptions } from '@headlessui/vue'
-import Check from '@/components/icons/outline/Check.vue'
+import { CheckIcon } from '@heroicons/vue/24/outline';
 import { Color, Option } from '@/types'
 
 withDefaults(

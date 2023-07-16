@@ -27,7 +27,7 @@
             />
             <Button color="neutral" size="medium" class="self-end">
                 <template #icon>
-                    <ChevronRight />
+                    <ChevronRightIcon />
                 </template>
                 More
             </Button>
@@ -40,7 +40,7 @@ import { useElementSize } from '@vueuse/core'
 import { ref } from 'vue'
 import { CardLayout, CardHeader, CardValue } from '@/components/cards'
 import Button from '@/components/buttons/Button.vue'
-import ChevronRight from '@/components/icons/outline/ChevronRight.vue'
+import { ChevronRightIcon } from '@heroicons/vue/24/outline'
 import BasicLine from '@/components/charts/BasicLine.vue'
 
 const el = ref<HTMLElement>()

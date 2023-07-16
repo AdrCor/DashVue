@@ -7,15 +7,14 @@
             'bg-danger-bg stroke-on-danger text-on-danger': value < 0,
         }"
     >
-        <TrendUp class="h-4 w-4" v-if="value >= 0" />
-        <TrendDown class="h-4 w-4" v-if="value < 0" />
+        <ArrowTrendingUpIcon class="h-4 w-4" v-if="value >= 0" />
+        <ArrowTrendingDownIcon class="h-4 w-4" v-if="value < 0" />
         {{ value >= 0 ? '+' : '' }}{{ value }}%
     </div>
 </template>
 
 <script setup lang="ts">
-import TrendDown from './icons/outline/TrendDown.vue'
-import TrendUp from './icons/outline/TrendUp.vue'
+import { ArrowTrendingDownIcon, ArrowTrendingUpIcon } from '@heroicons/vue/24/outline'
 
 defineProps<{
     value: number

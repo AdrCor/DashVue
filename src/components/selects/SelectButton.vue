@@ -7,7 +7,7 @@
             <slot></slot>
         </span>
         <span class="pointer-events-none right-0 flex items-center pr-2">
-            <ChevronDown
+            <ChevronDownIcon
                 :class="[{
                     'h-4 w-4': size == 'small',
                     'h-5 w-5': size == 'medium',
@@ -21,7 +21,7 @@
 
 <script setup lang="ts">
 import { ListboxButton } from '@headlessui/vue'
-import ChevronDown from '@/components/icons/outline/ChevronDown.vue'
+import { ChevronDownIcon } from '@heroicons/vue/24/outline';
 import { Color } from '@/types';
 
 withDefaults(
