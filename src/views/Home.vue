@@ -9,12 +9,12 @@
 </template>
 
 <script setup lang="ts">
-import CardRevenue from '@/blocs/CardRevenue.vue';
-import CardPayments from '@/blocs/CardPayments.vue'
+import CardRevenue from '@/blocs/cards/Revenues.vue';
+import CardPayments from '@/blocs/cards/Payments.vue'
 import { useWindowSize } from '@vueuse/core';
-import CardSales from '@/blocs/CardSales.vue';
-import CardVisits from '@/blocs/CardVisits.vue';
-import CardRoi from '@/blocs/CardRoi.vue';
+import CardSales from '@/blocs/cards/Sales.vue';
+import CardVisits from '@/blocs/cards/Visits.vue';
+import CardRoi from '@/blocs/cards/Roi.vue';
 
 const { width } = useWindowSize()
 
