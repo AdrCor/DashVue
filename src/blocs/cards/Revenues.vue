@@ -41,7 +41,7 @@ import { CardLayout, CardHeader, CardValue } from '@/components/cards'
 import BasicBar from '@/components/charts/BasicBar.vue'
 import Button from '@/components/buttons/Button.vue'
 import ChevronRight from '@/components/icons/outline/ChevronRight.vue'
-import Select from '@/components/select/Select.vue'
+import Select from '@/components/selects/Select.vue'
 
 const el = ref<HTMLElement>()
 
