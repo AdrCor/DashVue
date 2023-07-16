@@ -35,7 +35,7 @@
 </template>
 
 <script setup lang="ts">
-import { ListLayout, ListHeader, ListRow } from '@/components/list'
+import { ListLayout, ListHeader, ListRow } from '@/components/lists'
 import Button from '@/components/buttons/Button.vue'
 import ChevronRight from '@/components/icons/outline/ChevronRight.vue'
 import StatusTag from '@/components/StatusTag.vue'
