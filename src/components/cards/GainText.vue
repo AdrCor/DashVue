@@ -1,9 +1,9 @@
 <template>
     <div class="flex flex-col">
         <div class="flex flex-row items-center self-center" :class="{
-                'text-success-tx stroke-success-tx': value > 0,
-                'text-neutral-tx stroke-neutral-tx': value == 0,
-                'text-danger-tx stroke-danger-tx': value < 0
+                'text-success-tx': value > 0,
+                'text-neutral-tx': value == 0,
+                'text-danger-tx': value < 0
             }">
             <ArrowTrendingUpIcon v-if="value >= 0" class="h-4 w-4" />
             <ArrowTrendingDownIcon v-if="value < 0" class="h-4 w-4" />

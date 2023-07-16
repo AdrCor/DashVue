@@ -16,5 +16,6 @@ import Header from '@/components/Header.vue'
 import SearchBar from './components/SearchBar.vue'
 </script>
 
-'stroke-neutral-tx stroke-primary-tx stroke-secondary-tx stroke-success-tx stroke-warning-tx stroke-danger-tx'
 'text-neutral-tx text-primary-tx text-secondary-tx text-success-tx text-warning-tx text-danger-tx'
+'text-on-neutral text-on-primary text-on-secondary text-on-success text-on-warning text-on-danger'
+'bg-neutral-bg bg-primary-bg bg-secondary-bg bg-success-bg bg-warning-bg bg-danger-bg'

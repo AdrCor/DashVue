@@ -14,7 +14,7 @@
                 :class="active ? `bg-layer bg-opacity-10` : ''"
             >
                 <div
-                    class="flex stroke-neutral-tx"
+                    class="flex text-neutral-tx"
                     :class="{
                         'h-4 w-4': size == 'small',
                         'h-5 w-5': size == 'medium',

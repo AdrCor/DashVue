@@ -12,7 +12,7 @@
                     'h-4 w-4': size == 'small',
                     'h-5 w-5': size == 'medium',
                     'h-6 w-6': size == 'large',   
-                }, `stroke-${color}-tx`]"
+                }, `text-${color}-tx`]"
                 aria-hidden="true"
             />
         </span>
