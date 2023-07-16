@@ -1,5 +1,5 @@
 <template>
-    <CardLayout class="flex flex-col gap-4 w-full ">
+    <CardLayout class="flex flex-col gap-4 w-full min-h-96">
         <div class="flex flex-wrap items-center justify-between">
             <CardHeader :header="revenues.header" :sub="revenues.headerSub" />
             <Dropdown v-model="timeframe" :options="options" class="w-40" size="small" />
@@ -105,7 +105,7 @@ const revenuesMonth: Revenues = {
     labels: ['January', 'February', 'March', 'April', 'May', 'June'],
 
     value: 31834,
-    valueGain: 0,
+    valueGain: 5,
     valueSub: 1592,
 }
 
