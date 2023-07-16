@@ -11,7 +11,7 @@
 
 <script setup lang="ts">
 import Background from './components/global/Background.vue'
-import NavRail from '@/components/navigation/NavRail.vue'
+import NavRail from '@/blocs/navigation/NavRail.vue'
 import Header from '@/components/Header.vue'
 import SearchBar from './components/SearchBar.vue'
 </script>
