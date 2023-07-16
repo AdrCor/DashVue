@@ -18,14 +18,17 @@ ChartJS.register(Title, Tooltip, CategoryScale, LinearScale, PointElement, LineE
 
 const props = withDefaults(defineProps<{
     data: number[]
+    dataSecondary?: number[]
     labels?: string[]
     color?: Color
+    colorSecondary?: Color
     xMaxTicks?: number
     yMaxTicks?: number
 }>(), {
     xMaxTicks: 0,
     yMaxTicks: 0,
-    color: 'success'
+    color: 'primary',
+    colorSecondary: 'secondary'
 })
 
 const el = ref<HTMLLIElement | null>(null)
@@ -33,6 +36,7 @@ const el = ref<HTMLLIElement | null>(null)
 const theme = useThemeStore()
 
 const lineColor = computed(() => getStyle(`--twc-${props.color}-tx`, 1))
+const lineColorSecondary = computed(() => getStyle(`--twc-${props.colorSecondary}-tx`, 1))
 
 function getStyle(cssVar: string, opacity: number) {
     theme.mode
@@ -49,14 +53,24 @@ const chartData = computed<ChartData<'line'>>(() => {
         labels: props.labels ? props.labels : props.data.map(() => ''),
         datasets: [
             {
-                label: 'value',
+                label: 'current',
                 data: props.data,
                 pointBorderWidth: 1,
                 borderWidth: 4,
                 pointRadius: 1,
                 pointHoverRadius: 8,
                 borderColor: lineColor.value,
-                backgroundColor: lineColor.value
+                backgroundColor: lineColor.value,
+            },
+            {
+                label: 'previous',
+                data: props.dataSecondary ? props.dataSecondary : [],
+                pointBorderWidth: 1,
+                borderWidth: 3,
+                pointRadius: 1,
+                pointHoverRadius: 8,
+                borderColor: lineColorSecondary.value,
+                backgroundColor: lineColorSecondary.value
             }
         ]
     }
@@ -66,15 +80,16 @@ const chartOptions: ChartOptions<'line'> = {
     responsive: true,
     maintainAspectRatio: false,
     interaction: {
-        mode: 'nearest',
+        mode: 'index',
         intersect: false
     },
     animation: {
-        delay: 1000,
+        delay: 100,
     },
     scales: {
         y: {
             display: props.yMaxTicks > 0,
+            min: 50,
             grid: { display: false },
             border: { display: false },
             ticks: { maxTicksLimit: props.yMaxTicks }

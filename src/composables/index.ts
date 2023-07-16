@@ -25,6 +25,7 @@ interface FormatNumberOptions {
     precision?: number
     prefix?: string
     suffix?: string
+    showSign?: boolean
 }
 
 export function formatNumber(number: number, options: FormatNumberOptions = {}): string {
@@ -32,7 +33,7 @@ export function formatNumber(number: number, options: FormatNumberOptions = {}):
     const prefix = options.prefix || ''
     const suffix = options.suffix || ''
 
-    const sign = number < 0 ? '-' : '+'
+    const sign = number < 0 ? '-' : options.showSign ? '+' : ''
     const n = Math.abs(number)
 
     let formatedNumber = ''

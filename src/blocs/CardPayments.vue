@@ -56,7 +56,7 @@ const rows = [
         email: 'alexina.liddiard@google.com',
         amount: 299,
         status: 'done',
-        date: 'July 9th, 2023',
+        date: '1 min ago',
     },
     {
         name: 'Granger Hassen',
@@ -64,7 +64,7 @@ const rows = [
         email: 'granger.hassen@netflix.com',
         amount: 599,
         status: 'done',
-        date: 'July 7th, 2023',
+        date: '8 min ago',
     },
     {
         name: 'Vevay Wanderschek',
@@ -72,7 +72,7 @@ const rows = [
         email: 'vevay.wanderschek@facebook.com',
         amount: 599,
         status: 'cancelled',
-        date: 'July 7th, 2023',
+        date: '12 min ago',
     },
     {
         name: 'Durward McEttigen',
@@ -80,7 +80,7 @@ const rows = [
         email: 'durward.mcettigen@microsoft.com',
         amount: 299,
         status: 'pending',
-        date: 'July 3rd, 2023',
+        date: '37 min ago',
     },
     {
         name: 'Berkie Jevons',
@@ -88,7 +88,7 @@ const rows = [
         email: 'berkie.jevons@amazon.com',
         amount: 1299,
         status: 'done',
-        date: 'June 29th, 2023',
+        date: '1 hour ago',
     },
 ]
 </script>

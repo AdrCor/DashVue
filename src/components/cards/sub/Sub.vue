@@ -7,7 +7,7 @@
                 'text-neutral-tx text-opacity-60': value == 0,
             }"
         >
-            {{ formatNumber(value, { prefix: prefix, suffix: suffix }) }}
+            {{ formatNumber(value, { prefix: prefix, suffix: suffix, showSign: true }) }}
         </span>
         <span class="text-sm text-neutral-tx text-opacity-60">&nbsp;{{ text }}</span>
     </div>
