@@ -2,7 +2,7 @@
     <CardLayout class="flex flex-col gap-4 w-full min-h-96">
         <div class="flex flex-wrap items-center justify-between">
             <CardHeader :header="revenues.header" :sub="revenues.headerSub" />
-            <Dropdown v-model="timeframe" :options="options" class="w-40" size="small" />
+            <Select v-model="timeframe" :options="options" class="w-40" size="small" />
         </div>
 
         <BasicBar
@@ -41,7 +41,7 @@ import { CardLayout, CardHeader, CardValue } from '@/components/cards'
 import BasicBar from '@/components/charts/BasicBar.vue'
 import Button from '@/components/buttons/Button.vue'
 import ChevronRight from '@/components/icons/outline/ChevronRight.vue'
-import Dropdown from '@/components/dropdown/Dropdown.vue'
+import Select from '@/components/select/Select.vue'
 
 const el = ref<HTMLElement>()
 

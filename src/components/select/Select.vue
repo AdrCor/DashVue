@@ -5,15 +5,15 @@
         class="relative"
         as="div"
     >
-            <DropdownButton :size="size" :color="color" :type="type">{{ typeof selected == 'string' ? selected : selected.label }} </DropdownButton>
-            <DropdownPanel :options="options" :size="size" :color="color"/>
+            <SelectButton :size="size" :color="color" :type="type">{{ typeof selected == 'string' ? selected : selected ? selected.label : '' }} </SelectButton>
+            <SelectPanel :options="options" :size="size" :color="color"/>
     </Listbox>
 </template>
 
 <script setup lang="ts">
 import { Listbox } from '@headlessui/vue'
-import DropdownButton from './DropdownButton.vue'
-import DropdownPanel from './DropdownPanel.vue'
+import SelectButton from './SelectButton.vue'
+import SelectPanel from './SelectPanel.vue'
 import { Color, Option } from '@/types';
 
 withDefaults(

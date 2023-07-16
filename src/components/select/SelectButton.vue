@@ -21,7 +21,7 @@
 
 <script setup lang="ts">
 import { ListboxButton } from '@headlessui/vue'
-import ChevronDown from '../icons/outline/ChevronDown.vue'
+import ChevronDown from '@/components/icons/outline/ChevronDown.vue'
 import { Color } from '@/types';
 
 withDefaults(
