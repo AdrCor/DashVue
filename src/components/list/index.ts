@@ -1,10 +1,10 @@
-import List from './List.vue'
-import ListHeader from './ListHeader.vue'
-import ListRow from './ListRow.vue'
+import ListLayout from './Layout.vue'
+import ListHeader from './Header.vue'
+import ListRow from './Row.vue'
 
 
 export {
-    List,
+    ListLayout,
     ListHeader,
     ListRow
 }
