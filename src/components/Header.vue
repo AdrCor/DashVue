@@ -1,5 +1,5 @@
 <template>
-    <header ref="el" class="flex flex-row h-16 justify-between pr-4 items-center bg-red-300">
+    <header ref="el" class="flex flex-row h-16 justify-between pr-4 items-center">
         <h1 class="text-3xl text-neutral-tx capitalize">{{route.name}}</h1>
     </header>
 </template>
