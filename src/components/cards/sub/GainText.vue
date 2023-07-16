@@ -7,7 +7,7 @@
             }">
             <TrendUp v-if="value >= 0" class="h-4 w-4" />
             <TrendDown v-if="value < 0" class="h-4 w-4" />
-            <div class="text-sm">{{ value >= 0 ? '+' : '' }}{{ value }}%</div>
+            <div class="text-sm font-medium">{{ value >= 0 ? '+' : '' }}{{ value }}%</div>
         </div>
         <div class="text-center text-xs opacity-60">{{ text }}</div>
     </div>

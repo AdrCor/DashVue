@@ -1,7 +1,7 @@
 <template>
     <Background>
         <NavRail />
-        <SearchBar placeholder="Search.." round class="fixed right-4 top-5 m-1 h-10 w-64" />
+        <SearchBar placeholder="Search.." round class="fixed right-4 top-6 m-1 h-10 w-64" />
         <main class="ml-20 flex flex-col py-4 pr-4" ref="el">
             <Header />
             <router-view />
