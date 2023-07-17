@@ -114,3 +114,77 @@ export const baseLight: Theme = {
     'danger-tx': '#A83939',
     'on-danger': '#381313',
 }
+
+export const miamiDark: Theme = {
+    'grad-start': '#CC4883',
+    'grad-stop': '#43B4BF',
+    back: '#17191A' + opacity(90),
+
+    layer: '#E6F1F2',
+    neutral: '#E6F1F2',
+    'neutral-bg': '#E6F1F2',
+    'neutral-tx': '#E6F1F2',
+    'on-neutral': '#17191A',
+
+    primary: '#43B4BF',
+    'primary-bg': '#43B4BF',
+    'primary-tx': '#43B4BF',
+    'on-primary': '#123033',
+
+    secondary: '#CC4883',
+    'secondary-bg': '#CC4883',
+    'secondary-tx': '#CC4883',
+    'on-secondary': '#331724',
+
+    success: '#42BF74',
+    'success-bg': '#53A674',
+    'success-tx': '#42BF74',
+    'on-success': '#163F26',
+
+    warning: '#D9A54C',
+    'warning-bg': '#A68753',
+    'warning-tx': '#D9A54C',
+    'on-warning': '#3F3016',
+
+    danger: '#D84B57',
+    'danger-bg': '#A55259',
+    'danger-tx': '#D84B57',
+    'on-danger': '#3F1619',
+}
+
+export const miamiLight: Theme = {
+    'grad-start': '#CC4883',
+    'grad-stop': '#43B4BF',
+    back: '#E6F1F2' + opacity(80),
+
+    layer: '#17191A',
+    neutral: '#17191A',
+    'neutral-bg': '#17191A',
+    'neutral-tx': '#17191A',
+    'on-neutral': '#E6F1F2',
+
+    primary: '#43B4BF',
+    'primary-bg': '#43B4BF',
+    'primary-tx': '#43B4BF',
+    'on-primary': '#123033',
+
+    secondary: '#CC4883',
+    'secondary-bg': '#CC4883',
+    'secondary-tx': '#CC4883',
+    'on-secondary': '#331724',
+
+    success: '#42BF74',
+    'success-bg': '#53A674',
+    'success-tx': '#42BF74',
+    'on-success': '#163F26',
+
+    warning: '#D9A54C',
+    'warning-bg': '#A68753',
+    'warning-tx': '#D9A54C',
+    'on-warning': '#3F3016',
+
+    danger: '#D84B57',
+    'danger-bg': '#A55259',
+    'danger-tx': '#D84B57',
+    'on-danger': '#3F1619',
+}

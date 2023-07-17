@@ -1,6 +1,6 @@
 <template>
     <div
-        :class="{ 'dark theme-base-dark': theme.mode == 'dark', 'theme-base-light': theme.mode == 'light' }"
+        :class="`theme-${theme.name}-${theme.mode} ${theme.mode == 'dark' ? 'dark' : ''}`"
         class="fixed inset-0 bg-gradient-to-br from-grad-start to-grad-stop"
     >
         <div class="fixed inset-0 overflow-auto bg-back">
