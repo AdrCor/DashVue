@@ -1,5 +1,5 @@
 <template>
-    <CardLayout class="flex flex-col gap-4 w-full min-h-96">
+    <CardLayout class="flex flex-col gap-4 w-full">
         <div class="flex flex-wrap items-center justify-between">
             <CardHeader :header="sales.header" :sub="sales.headerSub" />
         </div>
