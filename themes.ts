@@ -133,7 +133,7 @@ export const miamiDark: Theme = {
 export const miamiLight: Theme = {
     'grad-start': '#CC4883',
     'grad-stop': '#43B4BF',
-    back: '#E6F1F2' + opacity(90),
+    back: '#E6F1F2' + opacity(80),
 
     layer: '#17191A',
     neutral: '#17191A',
@@ -159,4 +159,66 @@ export const miamiLight: Theme = {
     danger: '#B2232F',
     'danger-bg': '#BF6068',
     'on-danger': '#3F1619',
+}
+
+export const shadowDark: Theme = {
+    'grad-start': '#333',
+    'grad-stop': '#ccc',
+    back: '#000000' + opacity(90),
+
+    layer: '#fff',
+    neutral: '#fff',
+    'neutral-bg': '#fff',
+    'on-neutral': '#000',
+
+    primary: '#fff',
+    'primary-bg': '#fff',
+    'on-primary': '#000',
+
+    secondary: '#999',
+    'secondary-bg': '#999',
+    'on-secondary': '#000',
+
+    success: '#A2CBB3',
+    'success-bg': '#A2CBB3',
+    'on-success': '#000',
+
+    warning: '#CBB9A3',
+    'warning-bg': '#CBB9A3',
+    'on-warning': '#000',
+
+    danger: '#CBA3A6',
+    'danger-bg': '#CBA3A6',
+    'on-danger': '#000',
+}
+
+export const shadowLight: Theme = {
+    'grad-start': '#ccc',
+    'grad-stop': '#333',
+    back: '#ffffff' + opacity(90),
+
+    layer: '#000',
+    neutral: '#000',
+    'neutral-bg': '#000',
+    'on-neutral': '#fff',
+
+    primary: '#000',
+    'primary-bg': '#000',
+    'on-primary': '#fff',
+
+    secondary: '#555',
+    'secondary-bg': '#555',
+    'on-secondary': '#fff',
+
+    success: '#1E653B',
+    'success-bg': '#0F4D28',
+    'on-success': '#fff',
+
+    warning: '#735A17',
+    'warning-bg': '#5A4817',
+    'on-warning': '#fff',
+
+    danger: '#651414',
+    'danger-bg': '#5A1616',
+    'on-danger': '#fff',
 }

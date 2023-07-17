@@ -4,6 +4,8 @@
         <CardTheme name="base" mode="light" />
         <CardTheme name="miami" mode="dark" />
         <CardTheme name="miami" mode="light" />
+        <CardTheme name="shadow" mode="dark" />
+        <CardTheme name="shadow" mode="light" />
     </div>
 </template>
 

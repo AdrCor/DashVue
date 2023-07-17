@@ -1,5 +1,5 @@
 import { createThemes } from 'tw-colors'
-import { baseDark, baseLight, miamiDark, miamiLight } from './themes.ts'
+import { baseDark, baseLight, miamiDark, miamiLight, shadowDark, shadowLight } from './themes.ts'
 
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require('tailwindcss/defaultTheme')
@@ -22,7 +22,9 @@ export default {
             'base-dark': baseDark,
             'base-light': baseLight,
             'miami-dark': miamiDark,
-            'miami-light': miamiLight
+            'miami-light': miamiLight,
+            'shadow-dark': shadowDark,
+            'shadow-light': shadowLight
         }),
     ],
 }
