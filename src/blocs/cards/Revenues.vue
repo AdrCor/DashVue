@@ -1,8 +1,8 @@
 <template>
-    <CardLayout class="flex flex-col gap-4 w-full">
+    <CardLayout class="flex flex-col gap-4 w-full" ref="el">
         <div class="flex flex-wrap items-center justify-between">
             <CardHeader :header="revenues.header" :sub="revenues.headerSub" />
-            <Select v-model="timeframe" :options="options" class="w-40" size="small" />
+            <Select v-model="timeframe" :options="options" class="w-24" size="small" />
         </div>
 
         <BasicBar
@@ -24,7 +24,7 @@
                 sub-text="vs previous period"
                 :gain="revenues.valueGain"
             />
-            <Button color="neutral" size="medium" class="self-end">
+            <Button color="neutral" size="small" class="self-end">
                 <template #icon>
                     <ChevronRightIcon />
                 </template>

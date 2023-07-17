@@ -37,7 +37,7 @@ interface Theme {
     'on-danger': string
 }
 
-export const baseDark: Theme = {
+export const dashDark: Theme = {
     'grad-start': '#121419',
     'grad-stop': '#D0D6E7',
     back: '#121419' + opacity(90),
@@ -68,7 +68,7 @@ export const baseDark: Theme = {
     'on-danger': '#381313',
 }
 
-export const baseLight: Theme = {
+export const dashLight: Theme = {
     'grad-start': '#6E88C4',
     'grad-stop': '#D0D6E7',
     back: '#D0D6E7' + opacity(60),

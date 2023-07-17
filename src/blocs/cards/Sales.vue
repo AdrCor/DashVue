@@ -1,5 +1,5 @@
 <template>
-    <CardLayout class="flex flex-col gap-4 w-full">
+    <CardLayout class="flex flex-col gap-4 w-full" ref="el">
         <div class="flex flex-wrap items-center justify-between">
             <CardHeader :header="sales.header" :sub="sales.headerSub" />
         </div>
@@ -25,7 +25,7 @@
                 sub-text="vs previous period"
                 :gain="sales.valueGain"
             />
-            <Button color="neutral" size="medium" class="self-end">
+            <Button color="neutral" size="small" class="self-end">
                 <template #icon>
                     <ChevronRightIcon />
                 </template>

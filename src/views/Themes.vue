@@ -1,7 +1,7 @@
 <template>
     <div class="grid grid-cols-1 gap-2 md:grid-cols-2">
-        <CardTheme name="base" mode="dark" />
-        <CardTheme name="base" mode="light" />
+        <CardTheme name="dash" mode="dark" />
+        <CardTheme name="dash" mode="light" />
         <CardTheme name="miami" mode="dark" />
         <CardTheme name="miami" mode="light" />
         <CardTheme name="shadow" mode="dark" />
@@ -13,4 +13,3 @@
 import CardTheme from '@/blocs/CardTheme.vue'
 </script>
 
-'theme-base dark'
