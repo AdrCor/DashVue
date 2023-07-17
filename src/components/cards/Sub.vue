@@ -2,14 +2,14 @@
     <div>
         <span
             :class="{
-                'text-success-tx': value > 0,
-                'text-danger-tx': value < 0,
-                'text-neutral-tx text-opacity-60': value == 0,
+                'text-success': value > 0,
+                'text-danger': value < 0,
+                'text-neutral text-opacity-60': value == 0,
             }"
         >
             {{ formatNumber(value, { prefix: prefix, suffix: suffix, showSign: true }) }}
         </span>
-        <span class="text-sm text-neutral-tx text-opacity-60">&nbsp;{{ text }}</span>
+        <span class="text-sm text-neutral text-opacity-60">&nbsp;{{ text }}</span>
     </div>
 </template>
 

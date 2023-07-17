@@ -2,7 +2,7 @@
     <button
         class="flex flex-row items-center rounded-full transition-all hover:opacity-80 active:opacity-60 disabled:opacity-40"
         :class="[
-            type == 'outline' ? `text-${color}-tx border-${color}-tx border` :
+            type == 'outline' ? `text-${color} border-${color} border` :
             `bg-${color}-bg text-on-${color} shadow-xl`, // prettier-ignore
 
             slots.icon && slots.default ? 
@@ -28,7 +28,7 @@
 <script setup lang="ts">
 import { Color } from '@/types'
 import { useSlots } from 'vue'
-import { ArrowPathIcon } from '@heroicons/vue/24/outline';
+import { ArrowPathIcon } from '@heroicons/vue/24/outline'
 
 const slots = useSlots()
 

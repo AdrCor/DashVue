@@ -2,11 +2,11 @@
     <div class="flex flex-col">
         <div>
             <slot></slot>
-            <h2 class="text-xl" :class="`text-${color}-tx`">
+            <h2 class="text-xl" :class="`text-${color}`">
                 {{ header }}
             </h2>
         </div>
-        <h3 v-if="sub" class="text-sm text-neutral-tx text-opacity-60" :class="`text-${color}-tx`">{{ sub }}</h3>
+        <h3 v-if="sub" class="text-sm text-neutral text-opacity-60" :class="`text-${color}`">{{ sub }}</h3>
     </div>
 </template>
 
@@ -27,4 +27,4 @@ withDefaults(
 )
 </script>
 
-'text-neutral-tx text-primary-tx text-secondary-tx text-success-tx text-warning-tx text-danger-tx'
+'text-neutral text-primary text-secondary text-success text-warning text-danger'

@@ -1,9 +1,8 @@
 <template>
-    <div ref="el" class="w-full h-full">
-        <Line class="w-full h-full" :data="chartData" :options="chartOptions"/>
+    <div ref="el" class="h-full w-full">
+        <Line class="h-full w-full" :data="chartData" :options="chartOptions" />
     </div>
 </template>
-
 
 <script setup lang="ts">
 import { Chart as ChartJS, Title, Tooltip, CategoryScale, LinearScale, PointElement, LineElement } from 'chart.js'
@@ -15,28 +14,30 @@ import { Color } from '@/types'
 
 ChartJS.register(Title, Tooltip, CategoryScale, LinearScale, PointElement, LineElement)
 
-
-const props = withDefaults(defineProps<{
-    data: number[]
-    dataSecondary?: number[]
-    labels?: string[]
-    color?: Color
-    colorSecondary?: Color
-    xMaxTicks?: number
-    yMaxTicks?: number
-}>(), {
-    xMaxTicks: 0,
-    yMaxTicks: 0,
-    color: 'primary',
-    colorSecondary: 'secondary'
-})
+const props = withDefaults(
+    defineProps<{
+        data: number[]
+        dataSecondary?: number[]
+        labels?: string[]
+        color?: Color
+        colorSecondary?: Color
+        xMaxTicks?: number
+        yMaxTicks?: number
+    }>(),
+    {
+        xMaxTicks: 0,
+        yMaxTicks: 0,
+        color: 'primary',
+        colorSecondary: 'secondary',
+    }
+)
 
 const el = ref<HTMLLIElement | null>(null)
 
 const theme = useThemeStore()
 
-const lineColor = computed(() => getStyle(`--twc-${props.color}-tx`, 1))
-const lineColorSecondary = computed(() => getStyle(`--twc-${props.colorSecondary}-tx`, 1))
+const lineColor = computed(() => getStyle(`--twc-${props.color}`, 1))
+const lineColorSecondary = computed(() => getStyle(`--twc-${props.colorSecondary}`, 1))
 
 function getStyle(cssVar: string, opacity: number) {
     theme.mode
@@ -70,9 +71,9 @@ const chartData = computed<ChartData<'line'>>(() => {
                 pointRadius: 1,
                 pointHoverRadius: 8,
                 borderColor: lineColorSecondary.value,
-                backgroundColor: lineColorSecondary.value
-            }
-        ]
+                backgroundColor: lineColorSecondary.value,
+            },
+        ],
     }
 })
 
@@ -81,7 +82,7 @@ const chartOptions: ChartOptions<'line'> = {
     maintainAspectRatio: false,
     interaction: {
         mode: 'index',
-        intersect: false
+        intersect: false,
     },
     animation: {
         delay: 100,
@@ -92,20 +93,19 @@ const chartOptions: ChartOptions<'line'> = {
             min: 50,
             grid: { display: false },
             border: { display: false },
-            ticks: { maxTicksLimit: props.yMaxTicks }
+            ticks: { maxTicksLimit: props.yMaxTicks },
         },
         x: {
             display: props.xMaxTicks > 0,
             grid: { display: false },
             border: { display: false },
-            ticks: { maxTicksLimit: props.xMaxTicks }
-        }
+            ticks: { maxTicksLimit: props.xMaxTicks },
+        },
     },
     elements: {
         line: {
-            tension: .5
-        }
-    }
+            tension: 0.5,
+        },
+    },
 }
-
 </script>

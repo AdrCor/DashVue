@@ -1,14 +1,14 @@
 <template>
     <CardLayout class="flex min-h-0 grow basis-0 flex-col p-2">
         <CardHeader header="Payments" sub="Last payments" />
-        <ListLayout class="my-2 min-w-[500px] grow justify-around gap-2 text-neutral-tx">
+        <ListLayout class="my-2 min-w-[500px] grow justify-around gap-2 text-neutral">
             <ListHeader :cols="header" />
             <ListRow v-for="row in rows" class="">
                 <div class="flex grow-[2] flex-row items-center gap-2">
                     <img :src="row.picture" class="h-10 rounded-full" />
                     <div class="flex w-full flex-col truncate">
-                        <a class="truncate text-xl text-neutral-tx">{{ row.name }}</a>
-                        <a class="truncate text-sm text-neutral-tx/60">{{ row.email }}</a>
+                        <a class="truncate text-xl text-neutral">{{ row.name }}</a>
+                        <a class="truncate text-sm text-neutral/60">{{ row.email }}</a>
                     </div>
                 </div>
                 <a class="grow text-sm">{{ row.date }}</a>
