@@ -3,8 +3,8 @@
         @click="changeThemeMode"
         class="rounded-xl bg-layer bg-opacity-0 fill-neutral p-1 opacity-80 transition-all hover:bg-opacity-10 hover:opacity-100 hover:shadow-xl"
     >
-        <SunIcon v-if="theme.mode == 'dark'" />
-        <MoonIcon v-if="theme.mode == 'light'" />
+        <SunIcon v-if="theme.mode == 'light'" />
+        <MoonIcon v-if="theme.mode == 'dark'" />
     </button>
 </template>
 

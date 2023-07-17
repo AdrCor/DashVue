@@ -1,6 +1,6 @@
 <template>
-    <header ref="el" class="flex flex-row h-16 justify-between pr-4 items-center">
-        <h1 class="text-3xl text-neutral capitalize">{{route.name}}</h1>
+    <header ref="el" class="flex h-16 flex-row items-center">
+        <h1 class="text-3xl capitalize text-neutral">{{ route.name }}</h1>
     </header>
 </template>
 
@@ -8,6 +8,4 @@
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
-
-
 </script>

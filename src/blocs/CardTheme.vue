@@ -33,7 +33,6 @@ const props = defineProps<{
 function setTheme() {
     theme.setName(props.name)
     theme.setMode(props.mode)
-    console.log(theme.name, theme.mode)
 }
 
 </script>
