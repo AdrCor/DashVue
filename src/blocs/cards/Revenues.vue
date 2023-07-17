@@ -47,7 +47,7 @@ const el = ref<HTMLElement>()
 
 const { width } = useElementSize(el)
 
-const timeframe = ref('Day')
+const timeframe = ref('Week')
 
 const options = ['Day', 'Week', 'Month']
 

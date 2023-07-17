@@ -19,7 +19,7 @@
             <CardValue
                 class="self-start"
                 :value="sales.value"
-                prefix="$"
+                prefix=""
                 color="primary"
                 :sub-value="sales.valueSub"
                 sub-text="vs previous period"
