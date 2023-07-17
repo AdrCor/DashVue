@@ -4,6 +4,9 @@
             <RailButton to="/" :selected="currentRouteName == 'home'">
                 <HomeIcon />
             </RailButton>
+            <RailButton to="/themes" :selected="currentRouteName == 'themes'">
+                <PaintBrushIcon />
+            </RailButton>
             <RailButton to="/about" :selected="currentRouteName == 'about'">
                 <QuestionMarkCircleIcon />
             </RailButton>
@@ -17,8 +20,7 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import Layout from '@/components/global/Layout.vue'
-import { HomeIcon } from '@heroicons/vue/24/outline'
-import { QuestionMarkCircleIcon } from '@heroicons/vue/24/outline'
+import { HomeIcon, QuestionMarkCircleIcon, PaintBrushIcon } from '@heroicons/vue/24/outline'
 import RailButton from './RailButton.vue'
 import ThemeButton from './ThemeButton.vue'
 
