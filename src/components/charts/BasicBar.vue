@@ -25,14 +25,15 @@ const props = withDefaults(defineProps<{
 }>(), {
     xMaxTicks: 0,
     yMaxTicks: 0,
-    color: 'neutral'
+    color: 'neutral',
+    
 })
 
 const el = ref<HTMLLIElement | null>(null)
 
 const theme = useThemeStore()
 
-const lineColor = computed(() => getStyle(`--twc-${props.color}-tx`, 1))
+const barColor = computed(() => getStyle(`--twc-${props.color}-tx`, 1))
 const textColor = computed(() => getStyle('--twc-neutral-tx', .6))
 
 function getStyle(cssVar: string, opacity: number) {
@@ -53,7 +54,7 @@ const chartData = computed<ChartData<'bar'>>(() => {
                 label: 'value',
                 data: props.data,
                 borderRadius: 5,
-                backgroundColor: lineColor.value, 
+                backgroundColor: barColor.value,
                 barPercentage: .5
             }
         ]
@@ -81,11 +82,6 @@ const chartOptions = computed<ChartOptions<'bar'>>(() => {
                 border: { display: false },
                 ticks: { maxTicksLimit: props.xMaxTicks, color: textColor.value },
                 
-            }
-        },
-        elements: {
-            line: {
-                tension: .5
             }
         }
     }
