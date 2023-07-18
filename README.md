@@ -1,6 +1,6 @@
 # DashVue
 
-DashVue is an open-source template that allows you to create responsive and modern-looking dashboards using Vue.js, Typescript and TailwindCSS.
+[DashVue](https://DashVue.app) is an open-source template that allows you to create responsive and modern-looking dashboards using Vue.js, Typescript and TailwindCSS.
 
 ## What's included
 
