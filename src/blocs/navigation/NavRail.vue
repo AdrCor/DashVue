@@ -11,6 +11,9 @@
                 <QuestionMarkCircleIcon />
             </RailButton>
             <div class="flex-grow"></div>
+            <a href="https://github.com/AdrCor/DashVue" target=”_blank” class="h-10 w-10 rounded-full bg-layer bg-opacity-0 p-2">
+                <CodeBracketIcon />
+            </a>
             <ThemeButton />
         </Layout>
     </nav>
@@ -20,7 +23,7 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import Layout from '@/components/global/Layout.vue'
-import { HomeIcon, QuestionMarkCircleIcon, PaintBrushIcon } from '@heroicons/vue/24/outline'
+import { HomeIcon, QuestionMarkCircleIcon, PaintBrushIcon, CodeBracketIcon } from '@heroicons/vue/24/outline'
 import RailButton from './RailButton.vue'
 import ThemeButton from './ThemeButton.vue'
 

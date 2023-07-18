@@ -4,7 +4,7 @@
             class="flex h-full flex-row items-center justify-between gap-2 rounded-full bg-neutral-bg/40 px-2 text-on-neutral backdrop-blur-md"
             :blur="true"
         >
-            <a href="https://github.com" class="h-10 w-10 rounded-full bg-layer bg-opacity-0 p-2">
+            <a href="https://github.com/AdrCor/DashVue" target=”_blank” class="h-10 w-10 rounded-full bg-layer bg-opacity-0 p-2">
                 <CodeBracketIcon />
             </a>
             <NavBottomButton to="/about" :selected="currentRouteName == 'about'">
