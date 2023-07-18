@@ -1,7 +1,9 @@
 <template>
-    <router-link 
+    <router-link
         :to="to"
-        class="rounded-full p-2 bg-layer h-10 w-10" :class="selected ? 'bg-opacity-20' : 'bg-opacity-0'">
+        class="h-10 w-10 rounded-full bg-layer p-2"
+        :class="selected ? 'bg-opacity-20' : 'bg-opacity-0'"
+    >
         <slot></slot>
     </router-link>
 </template>

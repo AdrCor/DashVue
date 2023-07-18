@@ -1,5 +1,5 @@
 <template>
-    <CardLayout class="flex flex-col gap-4 w-full" ref="el">
+    <CardLayout class="flex w-full flex-col gap-4" ref="el">
         <div class="flex flex-wrap items-center justify-between">
             <CardHeader :header="revenues.header" :sub="revenues.headerSub" />
             <Select v-model="timeframe" :options="options" class="w-24" size="small" />
@@ -58,9 +58,9 @@ interface Revenues {
     data: number[]
     labels: string[]
 
-    value: number,
-    valueGain: number,
-    valueSub: number,
+    value: number
+    valueGain: number
+    valueSub: number
 }
 
 const revenues = computed<Revenues>(() => {
@@ -108,6 +108,4 @@ const revenuesMonth: Revenues = {
     valueGain: 5,
     valueSub: 1592,
 }
-
-
 </script>

@@ -1,7 +1,4 @@
-import { useBreakpoints } from "./useBreakpoints"
-import { formatNumber } from "./formatNumber"
+import { useBreakpoints } from './useBreakpoints'
+import { formatNumber } from './formatNumber'
 
-export { 
-    useBreakpoints,
-    formatNumber
-}
+export { useBreakpoints, formatNumber }

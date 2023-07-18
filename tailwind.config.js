@@ -24,7 +24,7 @@ export default {
             'miami-dark': miamiDark,
             'miami-light': miamiLight,
             'shadow-dark': shadowDark,
-            'shadow-light': shadowLight
+            'shadow-light': shadowLight,
         }),
     ],
 }

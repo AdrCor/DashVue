@@ -1,17 +1,21 @@
 <template>
-    <button @click="setTheme" class="h-64 w-full bg-gradient-to-br from-grad-start to-grad-stop rounded-3xl p-4 hover:opacity-90 active:opacity-80 transition-all" :class="`theme-${name}-${mode}`">
-        <div class="flex flex-col h-full w-full bg-back text-center p-4 rounded-3xl gap-2 overflow-auto">
-            <h2 class="text-primary text-2xl font-medium capitalize">{{ name }} {{ mode }}</h2>
-            <div class="flex flex-row grow gap-2">
+    <button
+        @click="setTheme"
+        class="h-64 w-full rounded-3xl bg-gradient-to-br from-grad-start to-grad-stop p-4 transition-all hover:opacity-90 active:opacity-80"
+        :class="`theme-${name}-${mode}`"
+    >
+        <div class="flex h-full w-full flex-col gap-2 overflow-auto rounded-3xl bg-back p-4 text-center">
+            <h2 class="text-2xl font-medium capitalize text-primary">{{ name }} {{ mode }}</h2>
+            <div class="flex grow flex-row gap-2">
                 <Layout class="flex h-full w-full flex-col items-center justify-around">
                     <h2 class="text-neutral">Neutral</h2>
                     <h2 class="text-primary">Primary</h2>
                     <h2 class="text-secondary">Secondary</h2>
                 </Layout>
                 <Layout class="flex h-full w-full flex-col items-center justify-around">
-                    <div class="rounded-full bg-neutral-bg text-on-neutral w-32 py-1 shadow-xl">Neutral</div>
-                    <div class="rounded-full bg-primary-bg text-on-primary w-32 py-1 shadow-xl">Primary</div>
-                    <div class="rounded-full bg-secondary-bg text-on-secondary w-32 py-1 shadow-xl">Secondary</div>
+                    <div class="w-32 rounded-full bg-neutral-bg py-1 text-on-neutral shadow-xl">Neutral</div>
+                    <div class="w-32 rounded-full bg-primary-bg py-1 text-on-primary shadow-xl">Primary</div>
+                    <div class="w-32 rounded-full bg-secondary-bg py-1 text-on-secondary shadow-xl">Secondary</div>
                 </Layout>
             </div>
         </div>
@@ -20,8 +24,8 @@
 
 <script setup lang="ts">
 import Button from '@/components/buttons/Button.vue'
-import Layout from '@/components/global/Layout.vue';
-import { useThemeStore } from '@/stores';
+import Layout from '@/components/global/Layout.vue'
+import { useThemeStore } from '@/stores'
 
 const theme = useThemeStore()
 
@@ -34,5 +38,4 @@ function setTheme() {
     theme.setName(props.name)
     theme.setMode(props.mode)
 }
-
 </script>

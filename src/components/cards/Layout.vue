@@ -6,5 +6,4 @@
 
 <script setup lang="ts">
 import Layout from '@/components/global/Layout.vue'
-
 </script>

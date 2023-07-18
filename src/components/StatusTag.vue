@@ -1,11 +1,13 @@
 <template>
-    <div class="flex flex-row rounded-full px-2 p-0.5 items-center gap-0.5 text-sm shadow-xl font-medium"
-    :class="{
-        'text-on-success bg-success-bg': status == 'success',
-        'text-on-warning bg-warning-bg': status == 'warning',
-        'text-on-danger bg-danger-bg': status == 'danger',
-        'text-on-neutral bg-neutral-bg': status == 'neutral',
-    }">
+    <div
+        class="flex flex-row items-center gap-0.5 rounded-full p-0.5 px-2 text-sm font-medium shadow-xl"
+        :class="{
+            'bg-success-bg text-on-success': status == 'success',
+            'bg-warning-bg text-on-warning': status == 'warning',
+            'bg-danger-bg text-on-danger': status == 'danger',
+            'bg-neutral-bg text-on-neutral': status == 'neutral',
+        }"
+    >
         <slot></slot>
     </div>
 </template>

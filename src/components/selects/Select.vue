@@ -5,8 +5,10 @@
         class="relative"
         as="div"
     >
-            <SelectButton :size="size" :color="color" :type="type">{{ typeof selected == 'string' ? selected : selected ? selected.label : '' }} </SelectButton>
-            <SelectPanel :options="options" :size="size" :color="color"/>
+        <SelectButton :size="size" :color="color" :type="type"
+            >{{ typeof selected == 'string' ? selected : selected ? selected.label : '' }}
+        </SelectButton>
+        <SelectPanel :options="options" :size="size" :color="color" />
     </Listbox>
 </template>
 
@@ -14,7 +16,7 @@
 import { Listbox } from '@headlessui/vue'
 import SelectButton from './SelectButton.vue'
 import SelectPanel from './SelectPanel.vue'
-import { Color, Option } from '@/types';
+import { Color, Option } from '@/types'
 
 withDefaults(
     defineProps<{
@@ -27,9 +29,9 @@ withDefaults(
     {
         size: 'medium',
         color: 'neutral',
-        type: 'default'
+        type: 'default',
     }
 )
 
-const selected = defineModel<Option | string>({required: false})
+const selected = defineModel<Option | string>({ required: false })
 </script>

@@ -14,5 +14,4 @@ import CardPayments from '@/blocs/cards/Payments.vue'
 import CardSales from '@/blocs/cards/Sales.vue'
 import CardVisits from '@/blocs/cards/Visits.vue'
 import CardRoi from '@/blocs/cards/Roi.vue'
-
 </script>

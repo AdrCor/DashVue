@@ -1,8 +1,8 @@
 <template>
     <Background v-if="breakpoint == 'xs'">
         <NavBottom />
-        <main class="flex flex-col pt-2 pb-16 pl-4">
-            <Header class="justify-center"/>
+        <main class="flex flex-col pb-16 pl-4 pt-2">
+            <Header class="justify-center" />
             <router-view />
         </main>
     </Background>
@@ -25,9 +25,8 @@ import SearchBar from './components/SearchBar.vue'
 import { useBreakpoints } from './composables'
 
 const breakpoint = useBreakpoints()
-
 </script>
 
-'text-neutral text-primary text-secondary text-success text-warning text-danger'
-'text-on-neutral text-on-primary text-on-secondary text-on-success text-on-warning text-on-danger'
-'bg-neutral-bg bg-primary-bg bg-secondary-bg bg-success-bg bg-warning-bg bg-danger-bg'
+'text-neutral text-primary text-secondary text-success text-warning text-danger' 'text-on-neutral text-on-primary
+text-on-secondary text-on-success text-on-warning text-on-danger' 'bg-neutral-bg bg-primary-bg bg-secondary-bg
+bg-success-bg bg-warning-bg bg-danger-bg'

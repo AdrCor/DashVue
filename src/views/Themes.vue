@@ -12,4 +12,3 @@
 <script setup lang="ts">
 import CardTheme from '@/blocs/CardTheme.vue'
 </script>
-

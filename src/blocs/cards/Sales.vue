@@ -1,5 +1,5 @@
 <template>
-    <CardLayout class="flex flex-col gap-4 w-full" ref="el">
+    <CardLayout class="flex w-full flex-col gap-4" ref="el">
         <div class="flex flex-wrap items-center justify-between">
             <CardHeader :header="sales.header" :sub="sales.headerSub" />
         </div>
@@ -55,11 +55,10 @@ interface Sales {
     previousData: number[]
     labels: string[]
 
-    value: number,
-    valueGain: number,
-    valueSub: number,
+    value: number
+    valueGain: number
+    valueSub: number
 }
-
 
 const sales: Sales = {
     header: 'Number of sales',
@@ -73,5 +72,4 @@ const sales: Sales = {
     valueGain: 18,
     valueSub: 142,
 }
-
 </script>

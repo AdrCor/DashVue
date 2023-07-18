@@ -1,6 +1,6 @@
 <template>
     <nav class="fixed z-20 h-full w-20 p-4">
-        <Layout class="flex h-full flex-col bg-opacity-20 px-1 py-2 gap-2" :blur="true">
+        <Layout class="flex h-full flex-col gap-2 bg-opacity-20 px-1 py-2" :blur="true">
             <RailButton to="/" :selected="currentRouteName == 'home'">
                 <HomeIcon />
             </RailButton>

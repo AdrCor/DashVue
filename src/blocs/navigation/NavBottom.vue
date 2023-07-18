@@ -16,7 +16,7 @@
             <NavBottomButton to="/themes" :selected="currentRouteName == 'themes'">
                 <PaintBrushIcon />
             </NavBottomButton>
-            <ThemeButton class="h-10 w-10"/>
+            <ThemeButton class="h-10 w-10" />
         </div>
     </nav>
 </template>
