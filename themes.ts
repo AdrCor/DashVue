@@ -1,4 +1,3 @@
-import { StringifyOptions } from 'querystring'
 
 function opacity(value: number) {
     return Math.ceil(value * 2.55)
