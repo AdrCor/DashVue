@@ -52,7 +52,7 @@ const header = [
 const rows = [
     {
         name: 'Alexina Liddiard',
-        picture: 'src/assets/pics/pf1.jpg',
+        picture: '/pics/pf1.jpg',
         email: 'alexina.liddiard@google.com',
         amount: 29,
         status: 'done',
@@ -60,7 +60,7 @@ const rows = [
     },
     {
         name: 'Granger Hassen',
-        picture: 'src/assets/pics/pf2.jpg',
+        picture: '/pics/pf2.jpg',
         email: 'granger.hassen@netflix.com',
         amount: 59,
         status: 'done',
@@ -68,7 +68,7 @@ const rows = [
     },
     {
         name: 'Vevay Wanderschek',
-        picture: 'src/assets/pics/pf3.jpg',
+        picture: '/pics/pf3.jpg',
         email: 'vevay.wanderschek@facebook.com',
         amount: 59,
         status: 'cancelled',
@@ -76,7 +76,7 @@ const rows = [
     },
     {
         name: 'Durward McEttigen',
-        picture: 'src/assets/pics/pf4.jpg',
+        picture: '/pics/pf4.jpg',
         email: 'durward.mcettigen@microsoft.com',
         amount: 29,
         status: 'pending',
@@ -84,7 +84,7 @@ const rows = [
     },
     {
         name: 'Berkie Jevons',
-        picture: 'src/assets/pics/pf5.jpg',
+        picture: '/pics/pf5.jpg',
         email: 'berkie.jevons@amazon.com',
         amount: 119,
         status: 'done',
