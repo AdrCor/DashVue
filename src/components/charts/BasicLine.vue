@@ -57,7 +57,7 @@ const chartData = computed<ChartData<'line'>>(() => {
                 label: 'current',
                 data: props.data,
                 pointBorderWidth: 1,
-                borderWidth: 4,
+                borderWidth: 3,
                 pointRadius: 1,
                 pointHoverRadius: 8,
                 borderColor: lineColor.value,
@@ -104,7 +104,7 @@ const chartOptions: ChartOptions<'line'> = {
     },
     elements: {
         line: {
-            tension: 0.5,
+            tension: 0.4,
         },
     },
 }

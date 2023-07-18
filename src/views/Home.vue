@@ -11,10 +11,8 @@
 <script setup lang="ts">
 import CardRevenue from '@/blocs/cards/Revenues.vue'
 import CardPayments from '@/blocs/cards/Payments.vue'
-import { useWindowSize } from '@vueuse/core'
 import CardSales from '@/blocs/cards/Sales.vue'
 import CardVisits from '@/blocs/cards/Visits.vue'
 import CardRoi from '@/blocs/cards/Roi.vue'
 
-const { width } = useWindowSize()
 </script>
